@@ -292,45 +292,47 @@
       <aside class="card" id="apply">
 <form class="form" name="creator-apply" method="POST" data-netlify="true">
   <input type="hidden" name="form-name" value="creator-apply" />
-          <h3>Confidential Creator Application</h3>
-          <div class="help">Tip: keep the form short. Qualify deeper on the call.</div>
 
-          <label class="input">Your Name
-            <input required placeholder="First + last name" />
-          </label>
+  <h3>Confidential Creator Application</h3>
+  <div class="help">Tip: keep the form short. Qualify deeper on the call.</div>
 
-          <label class="input">Main Platform
-            <select required>
-              <option value="" disabled selected>Select</option>
-              <option>OnlyFans</option>
-              <option>Fansly</option>
-              <option>Other</option>
-              <option>Not started yet</option>
-            </select>
-          </label>
+  <label class="input">Your Name
+    <input name="full-name" required placeholder="First + last name" />
+  </label>
 
-          <label class="input">Current Monthly Revenue (approx.)
-            <select required>
-              <option value="" disabled selected>Select</option>
-              <option>$0-$1k</option>
-              <option>$1k-$5k</option>
-              <option>$5k-$20k</option>
-              <option>$20k-$50k</option>
-              <option>$50k+</option>
-            </select>
-          </label>
+  <label class="input">Main Platform
+    <select name="main-platform" required>
+      <option value="" disabled selected>Select</option>
+      <option>OnlyFans</option>
+      <option>Fansly</option>
+      <option>Other</option>
+      <option>Not started yet</option>
+    </select>
+  </label>
 
-          <label class="input">Instagram / TikTok Handle
-            <input placeholder="@username" />
-          </label>
+  <label class="input">Current Monthly Revenue (approx.)
+    <select name="monthly-revenue" required>
+      <option value="" disabled selected>Select</option>
+      <option>$0-$1k</option>
+      <option>$1k-$5k</option>
+      <option>$5k-$20k</option>
+      <option>$20k-$50k</option>
+      <option>$50k+</option>
+    </select>
+  </label>
 
-          <label class="input">Your Goal (1 sentence)
-            <textarea placeholder="Example: I want to reach $20k/mo while staying private and consistent."></textarea>
-          </label>
+  <label class="input">Instagram / TikTok Handle
+    <input name="social-handle" placeholder="@username" />
+  </label>
 
-          <button class="btn primary" type="submit">Submit Application</button>
-          <div class="help">We reply within 24-48h (example). Your info stays confidential.</div>
-        </form>
+  <label class="input">Your Goal (1 sentence)
+    <textarea name="goal" placeholder="Example: I want to reach $20k/mo while staying private and consistent."></textarea>
+  </label>
+
+  <button class="btn primary" type="submit">Submit Application</button>
+  <div class="help">We reply within 24-48h (example). Your info stays confidential.</div>
+</form>
+
       </aside>
     </section>
 
