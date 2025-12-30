@@ -290,7 +290,8 @@
       </div>
 
       <aside class="card" id="apply">
-        <form class="form" onsubmit="event.preventDefault(); alert('Example form - connect this to your CRM (Typeform, Tally, HubSpot, etc.)');">
+<form class="form" name="creator-apply" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="creator-apply" />
           <h3>Confidential Creator Application</h3>
           <div class="help">Tip: keep the form short. Qualify deeper on the call.</div>
 
