@@ -1,106 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-html, body{
-  max-width: 100%;
-  overflow-x: hidden;
-}
-    /* -------- MOBILE POLISH -------- */
-@media (max-width: 640px){
-
-  /* Genel padding ve hizalama */
-  .wrap{
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  section{
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Navbar: butonlar sıkışmasın */
-  .nav .wrap{
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .nav .wrap > div:last-child{
-    width: 100%;
-    justify-content: flex-start;
-    display: flex;
-    gap: 8px;
-  }
-
-  .nav .wrap > div:last-child .btn{
-    flex: 1;
-    text-align: center;
-  }
-
-  /* Hero başlık ve metin */
-  h1{
-    font-size: 26px;
-    line-height: 1.18;
-    word-break: break-word;
-    overflow-wrap: anywhere;
-  }
-
-  .sub{
-    font-size: 14px;
-    max-width: 100%;
-  }
-
-  .hero{
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .panel{
-    padding: 18px 16px;
-  }
-
-  /* İstatistik / kart gridleri tek sütun veya 2 sütun */
-  .stats{
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-
-  .grid2,
-  .grid3,
-  .steps,
-  .faq{
-    grid-template-columns: 1fr;
-  }
-
-  /* Galeri */
-  .gallery-grid{
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  /* Form alanı */
-  .form{
-    padding: 16px;
-  }
-
-  .input{
-    font-size: 13px;
-  }
-
-  input, select, textarea{
-    font-size: 14px;
-  }
-
-  /* Paragrafların sağa taşmamasını garantile */
-  p, .tile p{
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-}
-</style>
-  </head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KEMEAGENCY - Creator Growth Agency</title>
@@ -118,70 +18,143 @@ html, body{
       --radius:18px;
       --max:1120px;
     }
-    *{box-sizing:border-box}
+
+    *{box-sizing:border-box;}
+
     html, body{
-  max-width:100%;
-  overflow-x:hidden;
-}
-    html,body{height:100%}
-    body{
       margin:0;
+      padding:0;
+      max-width:100%;
+      overflow-x:hidden;
+      height:100%;
+    }
+
+    body{
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(900px 500px at 15% 0%, rgba(124,92,255,.20), transparent 60%),
-                  radial-gradient(700px 450px at 85% 10%, rgba(37,211,102,.12), transparent 55%),
-                  var(--bg);
+      background:
+        radial-gradient(900px 500px at 15% 0%, rgba(124,92,255,.20), transparent 60%),
+        radial-gradient(700px 450px at 85% 10%, rgba(37,211,102,.12), transparent 55%),
+        var(--bg);
       color:var(--text);
       line-height:1.5;
     }
+
     a{color:inherit;text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:24px;
+    }
+
+    /* NAVBAR */
+
     .nav{
-      display:flex; align-items:center; justify-content:space-between;
+      display:flex;
+      align-items:center;
+      justify-content:center;
       gap:16px;
-      position:sticky; top:0;
+      position:sticky;
+      top:0;
       background:rgba(11,15,20,.7);
       backdrop-filter: blur(10px);
       border-bottom:1px solid var(--line);
       z-index:20;
     }
-    .nav .wrap{display:flex; align-items:center; justify-content:space-between; width:100%;}
-    .logo{
-      display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;
+
+    .nav .wrap{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      width:100%;
+      padding-block:12px;
+      padding-inline:24px;
     }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+
     .mark{
-      width:36px; height:36px; border-radius:12px;
+      width:36px;
+      height:36px;
+      border-radius:12px;
       background: linear-gradient(135deg, var(--brand), rgba(37,211,102,.9));
       box-shadow: 0 10px 30px rgba(124,92,255,.25);
-      display:flex; align-items:center; justify-content:center;
-      font-weight:900; font-size:16px; color:#ffffff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+      font-size:16px;
+      color:#ffffff;
       letter-spacing:.5px;
     }
-    .navlinks{display:flex; gap:18px; align-items:center; color:var(--muted); font-weight:600;}
-    .navlinks a{padding:10px 10px; border-radius:12px;}
-    .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text);}
+
+    .navlinks{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .navlinks a{
+      padding:10px 10px;
+      border-radius:12px;
+    }
+
+    .navlinks a:hover{
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+    }
+
     .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:8px;
-      padding:12px 16px; border-radius:14px; font-weight:800; letter-spacing:.2px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 16px;
+      border-radius:14px;
+      font-weight:800;
+      letter-spacing:.2px;
       border:1px solid var(--line);
       background:rgba(255,255,255,.06);
       color:var(--text);
       transition:.2s transform, .2s background, .2s border;
       cursor:pointer;
       white-space:nowrap;
+      font-size:14px;
     }
-    .btn:hover{transform: translateY(-1px); background:rgba(255,255,255,.09); border-color:rgba(255,255,255,.14);}
+
+    .btn:hover{
+      transform: translateY(-1px);
+      background:rgba(255,255,255,.09);
+      border-color:rgba(255,255,255,.14);
+    }
+
     .btn.primary{
       background: linear-gradient(135deg, var(--brand), rgba(124,92,255,.65));
       border-color: rgba(124,92,255,.55);
       box-shadow: 0 18px 60px rgba(124,92,255,.22);
     }
-    .btn.primary:hover{background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(124,92,255,.65));}
+
+    .btn.primary:hover{
+      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(124,92,255,.65));
+    }
+
     .btn.green{
       background: linear-gradient(135deg, var(--brand2), rgba(37,211,102,.55));
       border-color: rgba(37,211,102,.55);
       box-shadow: 0 18px 60px rgba(37,211,102,.14);
       color:#06120c;
     }
+
+    /* HERO */
+
     .hero{
       padding:40px 0 22px;
       display:grid;
@@ -189,8 +162,11 @@ html, body{
       gap:22px;
       align-items:stretch;
     }
+
     .badge{
-      display:inline-flex; align-items:center; gap:10px;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
       padding:10px 14px;
       border-radius:999px;
       border:1px solid var(--line);
@@ -199,53 +175,102 @@ html, body{
       font-weight:700;
       width:max-content;
     }
+
     h1{
       font-size: clamp(34px, 3.6vw, 54px);
       line-height:1.05;
       margin:14px 0 14px;
       letter-spacing:-.6px;
     }
+
     .sub{
       font-size: 16px;
       color: var(--muted);
       max-width: 58ch;
       margin:0 0 18px;
     }
-    .ctas{display:flex; gap:10px; flex-wrap:wrap; margin: 18px 0 8px;}
-    .mini{
-      display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; color:var(--muted); font-weight:700;
+
+    .ctas{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin: 18px 0 8px;
     }
-    .mini span{display:inline-flex; gap:8px; align-items:center; padding:8px 10px; border-radius:12px; background:rgba(255,255,255,.04); border:1px solid var(--line);}
+
+    .mini{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:14px;
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    .mini span{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      padding:8px 10px;
+      border-radius:12px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+    }
+
     .card{
       background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
       border:1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
-    .panel{padding:18px}
+
+    .panel{padding:18px;}
+
     .stats{
-      display:grid; grid-template-columns: repeat(3,1fr); gap:10px;
+      display:grid;
+      grid-template-columns: repeat(3,1fr);
+      gap:10px;
       margin-top:14px;
     }
+
     .stat{
       padding:14px;
       border-radius:16px;
       border:1px solid var(--line);
       background: rgba(11,15,20,.55);
     }
-    .stat .k{font-size:22px; font-weight:900;}
-    .stat .l{color:var(--muted); font-weight:700; font-size:13px; margin-top:4px;}
+
+    .stat .k{
+      font-size:22px;
+      font-weight:900;
+    }
+
+    .stat .l{
+      color:var(--muted);
+      font-weight:700;
+      font-size:13px;
+      margin-top:4px;
+    }
+
+    /* FORM */
+
     .form{
       padding:18px;
-      display:flex; flex-direction:column; gap:12px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
     }
+
     .form h3{margin:0 0 4px; font-size:18px;}
+
     .input{
-      display:flex; flex-direction:column; gap:8px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
       font-weight:700;
       color: var(--muted);
       font-size:13px;
     }
+
     input, select, textarea{
       border-radius:14px;
       border:1px solid var(--line);
@@ -255,49 +280,147 @@ html, body{
       outline:none;
       font-size:14px;
     }
+
     textarea{min-height:90px; resize:vertical;}
+
     .help{
       color: var(--muted);
       font-size:12px;
       margin-top:-4px;
     }
+
+    /* SECTIONS & GRIDS */
+
     .section{
       padding:18px 0;
     }
-    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:12px;}
-    .grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:12px;}
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:12px;
+    }
+
     .tile{
       padding:16px;
       border-radius: 18px;
       border:1px solid var(--line);
       background: rgba(255,255,255,.04);
     }
+
     .tile h4{margin:0 0 8px; font-size:16px;}
-    .tile p{margin:0; color:var(--muted); font-weight:650; font-size:14px;}
+
+    .tile p{
+      margin:0;
+      color:var(--muted);
+      font-weight:650;
+      font-size:14px;
+    }
+
     .titlebar{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:12px;
       margin: 10px 0 12px;
     }
-    .titlebar h2{margin:0; font-size:24px; letter-spacing:-.3px;}
-    .titlebar p{margin:0; color:var(--muted); font-weight:650; max-width:60ch;}
-    .steps{display:grid; grid-template-columns: repeat(4,1fr); gap:12px;}
+
+    .titlebar h2{
+      margin:0;
+      font-size:24px;
+      letter-spacing:-.3px;
+    }
+
+    .titlebar p{
+      margin:0;
+      color:var(--muted);
+      font-weight:650;
+      max-width:60ch;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns: repeat(4,1fr);
+      gap:12px;
+    }
+
     .stepnum{
-      width:34px; height:34px; border-radius:12px;
+      width:34px;
+      height:34px;
+      border-radius:12px;
       background: rgba(124,92,255,.16);
       border:1px solid rgba(124,92,255,.35);
-      display:flex; align-items:center; justify-content:center;
-      font-weight:900; color:#dcd6ff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+      color:#dcd6ff;
       margin-bottom:10px;
     }
-    .faq{display:grid; grid-template-columns: 1fr 1fr; gap:12px;}
+
+    .faq{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:12px;
+    }
+
     details{
       border:1px solid var(--line);
       background: rgba(255,255,255,.04);
       border-radius: 18px;
       padding:14px 14px;
     }
+
     summary{cursor:pointer; font-weight:900;}
-    details p{color:var(--muted); font-weight:650; margin:10px 0 0;}
+
+    details p{
+      color:var(--muted);
+      font-weight:650;
+      margin:10px 0 0;
+    }
+
+    /* GALLERY */
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap:12px;
+      margin-top:16px;
+    }
+
+    .gallery-grid figure{
+      margin:0;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(11,15,20,.75);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .gallery-grid figure img{
+      width:100%;
+      display:block;
+      aspect-ratio:3/4;       /* daha küçük ve dik */
+      object-fit:cover;
+    }
+
+    .gallery-grid figcaption{
+      padding:8px 10px;
+      font-size:12px;
+      font-weight:650;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+    }
+
+    /* TRUST & FOOTER */
+
     .footer{
       margin-top: 18px;
       padding: 20px 0 40px;
@@ -306,29 +429,61 @@ html, body{
       font-weight:650;
       font-size:13px;
     }
-    .pillrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;}
-        .pill{
+
+    .pillrow{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+
+    .pill{
       padding:9px 11px;
-      border:1px dashed rgba(255,255,255,14);
+      border:1px dashed rgba(255,255,255,0.14);
       border-radius:999px;
-      background: rgba(255,255,255,03);
+      background: rgba(255,255,255,0.03);
       color: var(--muted);
       font-weight:750;
       font-size:12px;
     }
 
-    /* Tablet kırılımı (mevcut) */
+    .trust-legal{
+      margin:24px 0 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      font-weight:650;
+    }
+
+    .trust-legal-title{
+      font-weight:800;
+      margin-bottom:4px;
+      color:var(--text);
+    }
+
+    .trust-legal-links a{
+      text-decoration:underline;
+      text-decoration-style:dotted;
+      text-underline-offset:3px;
+    }
+
+    /* TABLET */
+
     @media (max-width: 980px){
-      .hero{grid-template-columns: 1fr; }
+      .hero{grid-template-columns: 1fr;}
       .stats{grid-template-columns: repeat(3,1fr);}
       .steps{grid-template-columns: repeat(2,1fr);}
       .grid3{grid-template-columns: 1fr;}
       .grid2{grid-template-columns: 1fr;}
       .faq{grid-template-columns: 1fr;}
       .navlinks{display:none;}
+      .gallery-grid{
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
     }
 
-    /* Telefon için ekstra düzen */
+    /* MOBILE */
+
     @media (max-width: 640px){
 
       .wrap{
@@ -336,9 +491,15 @@ html, body{
         padding-right:16px;
       }
 
+      section{
+        padding-left:0;
+        padding-right:0;
+      }
+
       .nav .wrap{
         flex-wrap:wrap;
         gap:10px;
+        padding-inline:16px;
       }
 
       .nav .wrap > div:last-child{
@@ -364,8 +525,8 @@ html, body{
       }
 
       h1{
-        font-size:24px;
-        line-height:1.2;
+        font-size:26px;
+        line-height:1.18;
         word-break:break-word;
         overflow-wrap:anywhere;
       }
@@ -388,7 +549,8 @@ html, body{
       }
 
       .gallery-grid{
-        grid-template-columns:1fr;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        gap:8px;
       }
 
       .form{
@@ -400,7 +562,7 @@ html, body{
         word-break:break-word;
       }
     }
-   </style>
+  </style>
 </head>
 <body>
   <header class="nav">
@@ -431,10 +593,10 @@ html, body{
       <div class="panel">
         <div class="badge">Private & NDA-first • Performance-based • 24/7 team</div>
         <h1>Creators create.<br/>KEMEAGENCY scales the revenue.</h1>
-<p class="sub">
-  We’ve already tested this system with previous creators and models, so we know what actually works.
-  Most partners see clear, visible growth in revenue and consistency within the first 60 days of working with us.
-</p>
+        <p class="sub">
+          We’ve already tested this system with previous creators and models, so we know what actually works.
+          Most partners see clear, visible growth in revenue and consistency within the first 60 days of working with us.
+        </p>
 
         <div class="ctas">
           <a class="btn primary" href="#apply">Apply as a Creator</a>
@@ -473,54 +635,54 @@ html, body{
 
       <aside class="card" id="apply">
         <form class="form" name="KEMEAGENCY-apply" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html">
-  <input type="hidden" name="form-name" value="KEMEAGENCY-apply" />
-  <p style="display:none">
-    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-  </p>
+          <input type="hidden" name="form-name" value="KEMEAGENCY-apply" />
+          <p style="display:none">
+            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+          </p>
 
-  <h3>Confidential Creator Application</h3>
-  <div class="help">We keep this short. We go deeper on the call.</div>
+          <h3>Confidential Creator Application</h3>
+          <div class="help">We keep this short. We go deeper on the call.</div>
 
-  <label class="input">Your Name
-    <input name="full-name" required placeholder="First + last name" />
-  </label>
+          <label class="input">Your Name
+            <input name="full-name" required placeholder="First + last name" />
+          </label>
 
-  <label class="input">Email (so we can reply)
-    <input name="email" type="email" required placeholder="name@example.com" />
-  </label>
+          <label class="input">Email (so we can reply)
+            <input name="email" type="email" required placeholder="name@example.com" />
+          </label>
 
-  <label class="input">Main Platform
-    <select name="main-platform" required>
-      <option value="" disabled selected>Select</option>
-      <option>OnlyFans</option>
-      <option>Fansly</option>
-      <option>Other</option>
-      <option>Not started yet</option>
-    </select>
-  </label>
+          <label class="input">Main Platform
+            <select name="main-platform" required>
+              <option value="" disabled selected>Select</option>
+              <option>OnlyFans</option>
+              <option>Fansly</option>
+              <option>Other</option>
+              <option>Not started yet</option>
+            </select>
+          </label>
 
-  <label class="input">Current Monthly Revenue (approx.)
-    <select name="monthly-revenue" required>
-      <option value="" disabled selected>Select</option>
-      <option>$0-$1k</option>
-      <option>$1k-$5k</option>
-      <option>$5k-$20k</option>
-      <option>$20k-$50k</option>
-      <option>$50k+</option>
-    </select>
-  </label>
+          <label class="input">Current Monthly Revenue (approx.)
+            <select name="monthly-revenue" required>
+              <option value="" disabled selected>Select</option>
+              <option>$0-$1k</option>
+              <option>$1k-$5k</option>
+              <option>$5k-$20k</option>
+              <option>$20k-$50k</option>
+              <option>$50k+</option>
+            </select>
+          </label>
 
-  <label class="input">Instagram / TikTok Handle
-    <input name="social-handle" placeholder="@username" />
-  </label>
+          <label class="input">Instagram / TikTok Handle
+            <input name="social-handle" placeholder="@username" />
+          </label>
 
-  <label class="input">Your Goal (1 sentence)
-    <textarea name="goal" placeholder="Example: I want to reach $20k/mo while staying private and consistent."></textarea>
-  </label>
+          <label class="input">Your Goal (1 sentence)
+            <textarea name="goal" placeholder="Example: I want to reach $20k/mo while staying private and consistent."></textarea>
+          </label>
 
-  <button class="btn primary" type="submit">Submit Application</button>
-  <div class="help">We usually reply within 24–48h. Your info stays confidential.</div>
-</form>
+          <button class="btn primary" type="submit">Submit Application</button>
+          <div class="help">We usually reply within 24–48h. Your info stays confidential.</div>
+        </form>
       </aside>
     </section>
 
@@ -548,32 +710,32 @@ html, body{
     </section>
 
     <section class="section" id="services">
-  <div class="titlebar">
-    <div>
-      <h2>What we do</h2>
-      <p>We follow a clear 4-step roadmap with every creator: from deep audit to predictable scale.</p>
-    </div>
-  </div>
+      <div class="titlebar">
+        <div>
+          <h2>What we do</h2>
+          <p>We follow a clear 4-step roadmap with every creator: from deep audit to predictable scale.</p>
+        </div>
+      </div>
 
-  <div class="grid2">
-    <div class="tile">
-      <h4>1) Deep Account Audit</h4>
-      <p>We review your positioning, pricing, content, chat history and numbers to find the fastest wins.</p>
-    </div>
-    <div class="tile">
-      <h4>2) Offer & Profile Optimization</h4>
-      <p>We rewrite your profile, structure offers, upsells and retention so every chat has a chance to convert.</p>
-    </div>
-    <div class="tile">
-      <h4>3) Traffic & Funnel System</h4>
-      <p>We set up a daily posting system and funnels from IG / TikTok to paid subs with clear tracking.</p>
-    </div>
-    <div class="tile">
-      <h4>4) Scale & Reporting Loop</h4>
-      <p>Weekly reports, experiments and script updates so your revenue keeps growing month after month.</p>
-    </div>
-  </div>
-</section>
+      <div class="grid2">
+        <div class="tile">
+          <h4>1) Deep Account Audit</h4>
+          <p>We review your positioning, pricing, content, chat history and numbers to find the fastest wins.</p>
+        </div>
+        <div class="tile">
+          <h4>2) Offer & Profile Optimization</h4>
+          <p>We rewrite your profile, structure offers, upsells and retention so every chat has a chance to convert.</p>
+        </div>
+        <div class="tile">
+          <h4>3) Traffic & Funnel System</h4>
+          <p>We set up a daily posting system and funnels from IG / TikTok to paid subs with clear tracking.</p>
+        </div>
+        <div class="tile">
+          <h4>4) Scale & Reporting Loop</h4>
+          <p>Weekly reports, experiments and script updates so your revenue keeps growing month after month.</p>
+        </div>
+      </div>
+    </section>
 
     <section class="section" id="process">
       <div class="titlebar">
@@ -611,14 +773,14 @@ html, body{
       <div class="titlebar">
         <div>
           <h2>Results (anonymized)</h2>
-          <p>We don’t share names or accounts publicly. Every screenshot below is blurred and anonymized — 
-  but the results are real. Our focus is simple: consistent growth, predictable revenue, 
-  and less stress for the creator.</p>
-
-<p style="color:var(--muted); font-weight:650; margin-top:8px;">
-  These screenshots are real performance snapshots from creators we manage — identities hidden for privacy.
-</p>
-</p>
+          <p>
+            We don’t share names or accounts publicly. Every screenshot below is blurred and anonymized —
+            but the results are real. Our focus is simple: consistent growth, predictable revenue,
+            and less stress for the creator.
+          </p>
+          <p style="color:var(--muted); font-weight:650; margin-top:8px;">
+            These screenshots are real performance snapshots from creators we manage — identities hidden for privacy.
+          </p>
         </div>
         <a class="btn" href="#apply">Get a Free Audit</a>
       </div>
@@ -637,7 +799,8 @@ html, body{
           <p><b>Burnout reduced</b> by delegating chat + scheduling and adding weekly reporting.</p>
         </div>
       </div>
-         <!-- Results Gallery -->
+
+      <!-- Results Gallery -->
       <div class="gallery-grid">
         <figure>
           <img src="images/gallery-1.png" alt="Anonymized result 1" loading="lazy" />
@@ -677,6 +840,7 @@ html, body{
         </figure>
       </div>
     </section>
+
     <section class="section" id="faq">
       <div class="titlebar">
         <div>
@@ -719,40 +883,41 @@ html, body{
         </div>
       </div>
     </section>
-<div class="trust-legal">
-  <div class="trust-legal-title">Trust &amp; Legal</div>
-  <div class="trust-legal-links">
-    <a href="privacy.html">Privacy Policy</a> •
-    <a href="terms.html">Terms of Service</a> •
-    <a href="nda.html">NDA</a> •
-    <a href="refunds.html">Chargeback &amp; Refund Policy</a> •
-    <a href="contact.html">Contact</a>
-  </div>
-</div>
+
+    <div class="trust-legal">
+      <div class="trust-legal-title">Trust &amp; Legal</div>
+      <div class="trust-legal-links">
+        <a href="privacy.html">Privacy Policy</a> •
+        <a href="terms.html">Terms of Service</a> •
+        <a href="nda.html">NDA</a> •
+        <a href="refunds.html">Chargeback &amp; Refund Policy</a> •
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
 
     <footer class="footer">
-  <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; align-items:flex-start;">
-    <div>
-      <div style="font-weight:900; color:var(--text);">KEMEAGENCY — Model Management & Monetization</div>
-      <div>
-        We help creators build sustainable income on OnlyFans without burning out.
-        Private onboarding, clear expectations, and performance-driven systems —
-        so you can focus on creating while we handle growth.
-      </div>
-    </div>
+      <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; align-items:flex-start;">
+        <div>
+          <div style="font-weight:900; color:var(--text);">KEMEAGENCY — Model Management & Monetization</div>
+          <div>
+            We help creators build sustainable income on OnlyFans without burning out.
+            Private onboarding, clear expectations, and performance-driven systems —
+            so you can focus on creating while we handle growth.
+          </div>
+        </div>
 
-    <div>
-      <div style="font-weight:900; color:var(--text);">Trust & Legal</div>
-      <div>
-        Privacy Policy • Terms of Service • NDA • Chargeback & Refund Policy • Contact
+        <div>
+          <div style="font-weight:900; color:var(--text);">Trust & Legal</div>
+          <div>
+            Privacy Policy • Terms of Service • NDA • Chargeback & Refund Policy • Contact
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div style="margin-top:12px;">
-    © <span id="year"></span> KEMEAGENCY. All rights reserved.
-  </div>
-</footer>
+      <div style="margin-top:12px;">
+        © <span id="year"></span> KEMEAGENCY. All rights reserved.
+      </div>
+    </footer>
   </main>
 
   <script>
